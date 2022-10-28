@@ -4,7 +4,15 @@ pluginManagement {
     }
 }
 
+include("inverno-core")
+include("inverno-core-annotation")
+include("inverno-core-compiler")
+include("inverno-core-test")
+include("inverno-test")
+
 rootProject.name = "inverno"
+
+renameBuildFiles(rootProject)
 
 fun renameBuildFiles(project: ProjectDescriptor) {
     project.buildFileName = if (File(
